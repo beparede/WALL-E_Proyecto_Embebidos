@@ -14,7 +14,6 @@ const char * myWriteAPIKey = "7R5LZ8SCG3AP3OD0";
 unsigned long lastTime = 0;
 unsigned long timerDelay = 30000;
 
-
 int ENA = 14;         //pin GPIO14
 int IN1 = 17;         //pin GPIO27
 int IN2 = 5;         //pin GPIO26
@@ -74,7 +73,7 @@ void setup() {
 
   WiFi.mode(WIFI_STA);
 
-// Connect or reconnect to WiFi
+  // Connect or reconnect to WiFi
     if (WiFi.status() != WL_CONNECTED) {
       Serial.print("Attempting to connect");
       while (WiFi.status() != WL_CONNECTED) {
@@ -88,20 +87,17 @@ void setup() {
 
 void loop() {
   Leds();
-
   Adelante();
- // Tasks.update();
-
   ///BASE DE DATO////////
-
-  if ((millis() - lastTime) > timerDelay) { 
+  if ((millis() - lastTime) > timerDelay) {
     ///////////////ultra
     dist();
+
     if (d <= 20) {
+      Parar();
       recoleccion += 1 ;
       digitalWrite(led_RED, HIGH);
-
-      Parar();
+      delay(2000);| 
       Brazo.write(90);              // tell servo to go to position in variable 'pos'
       delay(1000);
 
@@ -170,7 +166,6 @@ void Parar()
 
 void Adelante()
 {
-  Serial.print("ADELANTE");
   //Direccion motor A
   digitalWrite (IN1, LOW);
   digitalWrite (IN2, HIGH);
