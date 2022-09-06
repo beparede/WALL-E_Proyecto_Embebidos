@@ -18,15 +18,26 @@ El robot recorrera una ruta preprogramada en busca de basura. Una vez esta sea d
 </p>
 
 ## 🛠️ Especificaciones Técnicas
-#### Rendimiento
+### Rendimiento
+```
 Rango de recorrido: Aprox. 100 m dependiendo de la carga de la batería
-Consumo energético: Aprox. 5.6 W durante uso típico (consumo por hora)
-Programación: basada en lenguaje C
 
-#### Características Físicas
+Consumo energético: Aprox. 5.6 W durante uso típico (consumo por hora)
+
+Programación: basada en lenguaje C
+```
+
+### Características Físicas
+```
 Capacidad de carga: 1.6 Kg/3.53 lb
+
 Rango de detección (HC-SR04): 0.02 m – 4 m
+
 Alcance (brazo): 0.5 m 
+
 Peso: 1.25 Kg/2.75 lb
+
 Materiales: plástico
+
 Fuente de poder: baterías AA para los motores, batería 9V para la alimentación del ESP-32
+```
